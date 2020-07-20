@@ -18,13 +18,11 @@ This blockchain simulation is composed of the following 5 Java classes :
 - *Miner.java*
 - *Utility.java*
 
+## Future Work
+
+Implementation of the signing process to guarantee the authenticity of transactions and the integrity of blocks,
+using a hash-based signature scheme (XMSS) to achieve a fully quantum-secure blockchain simulation.
+
 ## Support
 
 benjamin.fischer@etu.unige.ch
-
-## Future Work
-
-Implementation of the signing process to guarantee the authenticity of transactions and the integrity of blocks
-using a hash-based signature scheme (XMSS) to achieve a fully quantum-secure blockchain simulation.
-
-

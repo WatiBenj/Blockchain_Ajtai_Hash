@@ -72,16 +72,16 @@ public class Utility {
 		String hash = new String();
 		
 		for(int row=0; row<n; row++) {
-	    	double sum = 0;
-	    	for(int column=0; column<m; column++) {
-	    		/* MATRIX - VECTOR PRODUCT */
-	    		sum += AjtaiKey[row][column] * y[column];
-	    	}
-	    	/* CONVERSION TO HEXADECIMAL BASE (q = 16) */
-	    	hash = hash + Integer.toHexString((int) sum % q);
-	    }
+			double sum = 0;
+			for(int column=0; column<m; column++) {
+				/* MATRIX - VECTOR PRODUCT */
+				sum += AjtaiKey[row][column] * y[column];
+			}
+			/* CONVERSION TO HEXADECIMAL BASE (q = 16) */
+			hash = hash + Integer.toHexString((int) sum % q);
+		}
 	    
-	    return hash;
+		return hash;
 	}
 	
     public String getRandomHexString(int length) {

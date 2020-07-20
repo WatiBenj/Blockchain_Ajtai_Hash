@@ -18,6 +18,10 @@ This blockchain simulation is composed of the following 5 Java classes :
 - *Miner.java*
 - *Utility.java*
 
+## Output 
+
+![alt text](https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Output.PNG)
+
 ## Future Work
 
 Implementation of the signing process to guarantee the authenticity of transactions and the integrity of blocks,

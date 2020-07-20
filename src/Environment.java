@@ -9,7 +9,7 @@ public class Environment {
 	private static int m = 536; /* MAXIMAL LENGTH OF INPUT STRING (BINARY REPRESENTATION) */
 	private static int q = 16; /* MODULUS */
 	private static int[][] AjtaiKey = new int[n][m];
-	private static int difficulty = 3; /* NUMBER OF ZEROS STARTING HASH VALUE */
+	private static int difficulty = 4; /* NUMBER OF ZEROS STARTING HASH VALUE */
 	
 	public static void main(String[] args) {
 		
@@ -118,11 +118,13 @@ public class Environment {
 		for(Miner miner : miners) {
 			if(newBlock.getMiner().equals(miner.getName())) {
 				miner.setReward(miner.getReward() + 1);
-				System.out.println(miner.getName() + " receives 1 Bitcoin");
+				System.out.println("-----------------------");
+				System.out.println("|    BITCOIN REWARD   : " + miner.getName() + " receives 1 Bitcoin");
+				System.out.println("-----------------------");
 			}
 		}
 		System.out.print("\n");
-
+		
 		/* NEW BLOCKCHAIN */
 		displayChain(blockchain);
 	}

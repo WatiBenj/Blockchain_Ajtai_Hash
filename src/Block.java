@@ -28,10 +28,6 @@ public class Block {
 		return previousHash;
 	}
 
-	public void setPreviousHash(String previousHash) {
-		this.previousHash = previousHash;
-	}
-
 	public String getHash() {
 		return hash;
 	}
@@ -50,10 +46,6 @@ public class Block {
 
 	public Date getTimeStamp() {
 		return timeStamp;
-	}
-
-	public void setTimeStamp(Date timeStamp) {
-		this.timeStamp = timeStamp;
 	}
 
 	public int getNonce() {

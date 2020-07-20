@@ -125,7 +125,6 @@ public class Environment {
 
 		/* NEW BLOCKCHAIN */
 		displayChain(blockchain);
-		
 	}
 	
 	public static void displayChain(ArrayList<Block> blockchain) {
@@ -142,7 +141,6 @@ public class Environment {
 			System.out.println("-----------------------");
 		}
 		System.out.print("\n");
-		
 	}
 
 }

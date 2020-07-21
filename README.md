@@ -14,7 +14,7 @@ This blockchain simulation is composed of the following 5 Java classes :
 
 - **Transaction.java**
 
-   A transaction can simply be expressed as the set of the next fields :
+   A transaction is simply composed of the following elements :
   
    - Identifier
    - Name of the sender
@@ -25,9 +25,7 @@ This blockchain simulation is composed of the following 5 Java classes :
 
   This class is only used as a helper containing the definitions of two calculation methods that are essential in the mining process, namely the Merkle root computation (*computeMerkleRoot*) and the Ajtai hash function computation (*AjtaiHash*). It was only created to avoid duplicating the code of these methods in the Block and Miner classes.
   
-  The Merkle root is computed in the usual manner using the transaction's identifiers as leaves.
-  
-  The Ajtai hash function is parametrized by the three following integers which define an (*n* x *m*) random binary matrix, called the Ajtai key.
+  The Merkle root is computed in the usual manner using the transaction's identifiers as leaves, while the Ajtai hash function is parametrized by the three following integers which define an (*n* x *m*) random binary matrix, called the Ajtai key.
   
    - *n* : length of the output hash value (hexadecimal representation)
    - *m* : maximal length of the input string (binary representation)
@@ -35,7 +33,7 @@ This blockchain simulation is composed of the following 5 Java classes :
   
 - **Block.java**
 
-  The necessary fields for the complete representation of a block include the following elements :
+  The necessary fields for the complete representation of a block are the following :
   
    - Hash of the previous block
    - Merkle root (computed from a set of transactions)
@@ -46,7 +44,7 @@ This blockchain simulation is composed of the following 5 Java classes :
 
 - **Miner.java**
 
-  To fully represent a miner, the following attributes are required :
+  To fully represent a miner, the next attributes are required :
   
    - Name of the miner
    - Own copy of the Ajtai key
@@ -89,6 +87,6 @@ Benjamin Fischer - benjamin.fischer@etu.unige.ch
 
 ## Future Work
 
-The signing process still needs to be implemented in order to guarantee the authenticity of transactions and the integrity of blocks. This could be realized using a hash-based signature scheme (XMSS) to achieve a fully quantum-secure blockchain simulation.
+The signing process still needs to be implemented to guarantee the authenticity of transactions and the integrity of blocks. This could be realized using a hash-based signature scheme (XMSS) in order to achieve a fully quantum-secure blockchain simulation.
 
 

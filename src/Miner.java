@@ -19,7 +19,7 @@ public class Miner {
 		this.transactions = transactions;
 	}
 	
-	/* ATTEMPT TO MINE A SINGLE BLOCK */
+	/* ATTEMPT TO MINE A NEW BLOCK */
 	public Block mineBlock(int difficulty) {
 		
 		Utility tool = new Utility(AjtaiKey);

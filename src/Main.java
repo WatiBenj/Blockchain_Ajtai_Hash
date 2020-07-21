@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Environment {
+public class Main {
 	
 	private static ArrayList<Block> blockchain = new ArrayList<Block>();
 	private static int n = 64; /* LENGTH OF OUTPUT HASH VALUE (HEXADECIMAL REPRESENTATION)*/

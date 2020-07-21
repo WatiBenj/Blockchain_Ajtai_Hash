@@ -61,8 +61,7 @@ This blockchain simulation is composed of the following 5 Java classes :
 
  - **Main.java** (Main class)
  
-   This class 
-   This class includes all the stages required to add a new block to the blockchain. More precisely, this procedure can be described by the following steps :
+   This class can be seen as the environment in which all actions related to the extraction of a new block and its addition to the blockchain are undertaken. Its fields are the *n*, *m* and *q* parameters of the Ajtai hash function, the corresponding *Ajtai key* and an integer *difficulty* specifying the required number of 0's with which the correct hash value should start. It contains all the stages required to add a new block to the blockchain. More precisely, this procedure can be described by the following steps :
   
   1. Definition of the Ajtai key (random binary matrix)
   2. Instanciation of the first block (genesis)

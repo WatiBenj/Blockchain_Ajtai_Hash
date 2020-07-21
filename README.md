@@ -13,22 +13,22 @@ instead of the standard SHA-256, in the implementation of a basic blockchain.
 This blockchain simulation is composed of the following 5 Java classes :
 
  - **Environment.java** (Main class)
-
+ 
   This class includes all the stages required to add a new block to the blockchain. More precisely, this procedure can be described by the following steps :
   
- 1. Definition of the Ajtai key (random binary matrix)
- 2. Instanciation of the first block (genesis)
- 3. Addition of the genesis block to the (empty) blockchain
- 4. Instanciation of 4 miners with their own copy of the Ajtai key and the initial blockchain
- 5. Instanciation of 8 transactions
- 6. Computation of the Merkle root from the set of transactions by each miner
- 7. Mining process :
+   1. Definition of the Ajtai key (random binary matrix)
+   2. Instanciation of the first block (genesis)
+   3. Addition of the genesis block to the (empty) blockchain
+   4. Instanciation of 4 miners with their own copy of the Ajtai key and the initial blockchain
+   5. Instanciation of 8 transactions
+   6. Computation of the Merkle root from the set of transactions by each miner
+   7. Mining process :
      - Each miner attempts succesively to mine the next block by applying the Ajtai hash function on the concatenation of the hash of the previous bloc, the Merkle            root and the nonce
      - This step is repeated many times by randomly varying the nonce until the proof of work is verified (hash must begin with a certain number of 0)
      - The process ends immediately as soon as one of the miners obtains the desired hash value
- 8. Addition of the new mined block to the blockchain of each miner
- 9. Verification of the blockchain's validity by each miner
- 10. Attribution of 1 Bitcoin to the miner who mined the new block
+   8. Addition of the new mined block to the blockchain of each miner
+   9. Verification of the blockchain's validity by each miner
+   10. Attribution of 1 Bitcoin to the miner who mined the new block
   
 - **Block.java**
 

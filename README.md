@@ -10,11 +10,11 @@ instead of the standard SHA-256, in the implementation of a basic blockchain.
 
 ## Description
 
-This blockchain simulation is composed of the following 5 Java classes :
+The blockchain simulation is composed of the following five Java classes :
 
 - **Transaction.java**
 
-   A transaction is simply composed of the following elements :
+   A transaction is simply composed of the next elements :
   
    - Identifier
    - Name of the sender
@@ -23,14 +23,18 @@ This blockchain simulation is composed of the following 5 Java classes :
    
 - **Utility.java**
 
-  This class is only used as a helper containing the definitions of two calculation methods that are essential in the mining process, namely the Merkle root computation (*computeMerkleRoot*) and the Ajtai hash function computation (*AjtaiHash*). It was only created to avoid duplicating the code of these methods in the Block and Miner classes.
+  This class is only used as a helper containing the definitions of two essential methods in the mining process, namely the Merkle root computation (*computeMerkleRoot*) and the Ajtai hash function computation (*AjtaiHash*). The purpose of this class is to avoid duplicating the code of these methods in the *Block* and *Miner* classes.
   
-  The Merkle root is computed in the usual manner using the transaction's identifiers as leaves, while the Ajtai hash function is parametrized by the three following integers which define an (*n* x *m*) random binary matrix, called the Ajtai key.
+  The *Merkle root* is computed in the usual manner using the transaction's identifiers as leaves, while the Ajtai hash function is parametrized by the three following integers which define a random (*n* x *m*) binary matrix, called the *Ajtai key*.
   
-   - *n* : length of the output hash value (hexadecimal representation)
-   - *m* : maximal length of the input string (binary representation)
-   - *q* : modulus
-  
+   - *n*    :     length of the output hash value (hexadecimal representation)
+   - *m*    :     maximal length of the input string (binary representation)
+   - *q*    :     modulus
+ 
+   The Ajtai hash function is then defined as :
+   
+   ![alt text](https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Ajtai_Hash_Function.PNG)
+   
 - **Block.java**
 
   The necessary fields for the complete representation of a block are the following :

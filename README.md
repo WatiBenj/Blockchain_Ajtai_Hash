@@ -66,7 +66,9 @@ The blockchain simulation is composed of the following five Java classes :
 
  - **Main.java** (Main class)
  
-   This class can be seen as the environment in which all actions related to the extraction of a new block and its addition to the blockchain are undertaken. Its fields are the parameters *n*, *m* and *q* of the Ajtai hash function, the corresponding *Ajtai key* and an integer *difficulty* specifying the required number of 0's with which the correct hash value should start. The *main* method contains all the stages required to add a new block to the blockchain. More precisely, this procedure can be described by the following steps :
+   This class can be seen as the environment in which all actions related to the extraction of a new block and its addition to the blockchain are undertaken. Its fields are the parameters *n*, *m* and *q* of the Ajtai hash function, the corresponding *Ajtai key* and an integer *difficulty* specifying the required number of 0's with which the correct hash value should start. The *main* method contains all the stages required to add a new block to the blockchain.
+   
+ More precisely, this procedure can be described by the following steps :
   
   1. Definition of the Ajtai key (random binary matrix)
   2. Instanciation of the first block (genesis)
@@ -81,10 +83,12 @@ The blockchain simulation is composed of the following five Java classes :
   8. Addition of the new mined block to the blockchain of each miner
   9. Verification of the blockchain's validity by each miner
   10. Attribution of a given number of bitcoins (reward) to the miner who mined the new block
+ 
+ In the mining process, it is assumed that all Ajtai hash calls have the same duration. Therefore, competition between miners may simply be expressed as a succession of each miner's attempt. In other words, each miner has only one try in each round and must wait for the try of all the other miners before starting hashing again.  
 
 ## Output
 
-Below is an output example of the project's execution (*Environment.java*). As we can observe, it is the Miner N°4 that has obtained the correct hash value (beginning with four 0's) required for the proof of work before its three other concurrents. As a result, Miner N°4 received a reward of 1 Bitcoin.
+Below is an output example of the project's execution (*Main.java*). As we can observe, *Miner N°4* obtained the correct hash value (starting with four 0's as *difficulty* = 4) required for the proof of work before its three other concurrents. As a result, *Miner N°4* received a reward of 1 bitcoin.
 
 ![image](https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Output.PNG)
 
@@ -94,6 +98,6 @@ Benjamin Fischer - benjamin.fischer@etu.unige.ch
 
 ## Future Work
 
-The signing process still needs to be implemented to guarantee the authenticity of transactions and the integrity of blocks. This could be realized using a hash-based signature scheme (XMSS) in order to achieve a fully quantum-secure blockchain simulation.
+The signing process still needs to be implemented to guarantee the authenticity of transactions and the integrity of blocks. This could be realized using a hash-based signature scheme (XMSS) in order to achieve a fully quantum-secure blockchain implementation.
 
 

@@ -36,6 +36,7 @@ The blockchain simulation is composed of the following five Java classes :
    <p align="center">
       <img src="https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Ajtai_Hash_Function.PNG" width="410" height="100">
    </p>
+   
    where the (*n* x *m*) binary matrix *A* is the *Ajtai key*.
    
 - **Block.java**
@@ -68,7 +69,7 @@ The blockchain simulation is composed of the following five Java classes :
  
    This class can be seen as the environment in which all actions related to the extraction of a new block and its addition to the blockchain are undertaken. Its fields are the parameters *n*, *m* and *q* of the Ajtai hash function, the corresponding *Ajtai key* and an integer *difficulty* specifying the required number of 0's with which the correct hash value should start. The *main* method contains all the stages required to add a new block to the blockchain.
    
- More precisely, this procedure can be described by the following steps :
+ More precisely, the addition of a new block can be described by the following steps :
   
   1. Definition of the Ajtai key (random binary matrix)
   2. Instanciation of the first block (genesis)
@@ -78,7 +79,7 @@ The blockchain simulation is composed of the following five Java classes :
   6. Computation of the Merkle root from the set of transactions by each miner
   7. Mining process :
      - Each miner attempts successively to mine the next block by applying the Ajtai hash function on the concatenation of the hash of the previous bloc, the Merkle root and the nonce
-     - This step is repeated many times by randomly varying the nonce until the proof of work is verified (hash must begin with the correct number of 0's specified by the parameter *difficulty*)
+     - This step is repeated many times by randomly varying the nonce value until the proof of work is established (hash must begin with the correct number of 0's specified by the parameter *difficulty*)
      - The process ends immediately as soon as one of the miners obtains the desired hash value
   8. Addition of the new mined block to the blockchain of each miner
   9. Verification of the blockchain's validity by each miner

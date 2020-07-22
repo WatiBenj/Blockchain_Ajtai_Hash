@@ -35,7 +35,7 @@ The blockchain simulation is composed of the following five Java classes :
    
    <p align="center">
       <img src="https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Ajtai_Hash_Function.PNG" width="410" height="100>
-   <p/>
+   </p>
    
    where the (*n* x *m*) binary matrix *A* is the *Ajtai key*.
    

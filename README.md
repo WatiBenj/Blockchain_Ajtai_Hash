@@ -65,7 +65,7 @@ The blockchain simulation is composed of the following five Java classes :
    - Comparison of the registered hash of the current block and the newly computed hash of the current block
    - Verification of the proof of work (check if the hash of the current block starts with the correct number of 0's)
 
- - **Main.java** (Main class)
+ - **Main.java**
  
    This class can be seen as the environment in which all actions related to the extraction of a new block and its addition to the blockchain are undertaken. Its fields are the parameters *n*, *m* and *q* of the Ajtai hash function, the corresponding *Ajtai key* and an integer *difficulty* specifying the required number of 0's with which the correct hash value should start. The *main* method contains all the stages required to add a new block to the blockchain.
    

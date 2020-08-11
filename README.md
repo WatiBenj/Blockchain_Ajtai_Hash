@@ -49,6 +49,8 @@ The blockchain simulation is composed of the following five Java classes :
    - Hash of the block (AjtaiHash(previous hash + Merkle root + nonce))
    - Timestamp (date + time)
    - Name of the miner
+   
+  The first block is called the \emph{genesis} block and since it has no previous block, its previous hash is randomly generated.
 
 - **Miner.java**
 
@@ -59,7 +61,7 @@ The blockchain simulation is composed of the following five Java classes :
    - Own copy of the blockchain
    - Reward (amount of bitcoins)
  
-  This class is also equipped with two essential methods concerning the mining of a block (*mineBlock*) and the verification of the blockchain's validity (*checkChainValidity*). A single call to *mineBlock* generates a single hash value counting as an attempt to constitute the proof of work. The validity of the blockchain is checked by each miner after adding a new mined block. This verification procedure includes the next three steps :
+  This class is also equipped with two essential methods concerning the mining of a block (*mineBlock*) and the verification of the blockchain's validity (*checkChainValidity*). A single call to *mineBlock* generates a single hash value counting as an attempt to constitute the proof of work. The validity of the blockchain is checked by each miner after adding a new mined block. This method simply loops through all the blocks in the chain, then compares the hashes and verifies the proof work. This verification procedure includes the next three steps :
   
    - Comparison of the hash of the previous block and the previous hash of the current block
    - Comparison of the registered hash of the current block and the newly computed hash of the current block
@@ -99,6 +101,6 @@ Benjamin Fischer - benjamin.fischer@etu.unige.ch
 
 ## Future Work
 
-The signing process still needs to be implemented to guarantee the authenticity of transactions and the integrity of blocks. This could be realized using a hash-based signature scheme (XMSS) in order to achieve a fully quantum-secure blockchain implementation.
+The signing process ensuring the authenticity of transactions and the integrity of blocks is left as a future work. This could be realized using a hash-based signature scheme (XMSS) in order to achieve a fully quantum-secure blockchain implementation.
 
 

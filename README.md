@@ -91,7 +91,7 @@ The blockchain simulation is composed of the following five Java classes.
 
 ## Output
 
-Below is an output example from the execution of the *Main.java* class. As we can observe, *Miner N°4* obtained the correct hash value (starting with four 0's as *difficulty* = 4) required for the proof of work, before its three other concurrents. As a result, *Miner N°4* received a reward of 1 bitcoin.
+Below is an output example from the execution of the *Main* class. As we can observe, *Miner N°4* obtained the correct hash value (starting with four 0's as *difficulty* = 4) required for the proof of work, before its three other concurrents. As a result, *Miner N°4* received a reward of 1 bitcoin.
 
 ![image](https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Output.PNG)
 

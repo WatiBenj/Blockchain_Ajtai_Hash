@@ -25,7 +25,7 @@ The blockchain simulation is composed of the following five Java classes.
 
   This class is only used as a helper containing the definitions of two essential methods in the mining process, namely the Merkle root computation (*computeMerkleRoot*) and the Ajtai hash function computation (*AjtaiHash*). The purpose of this class is to avoid duplicating the code of these methods in the *Block* and *Miner* classes.
   
-  The *Merkle root* is computed in the usual way using the transaction's identifiers as leaves, while the Ajtai hash function is parametrized by the three following integers which define a random *n* x *m* binary matrix, called the *Ajtai key*.
+  The *Merkle root* is computed in the usual way using the transaction's identifiers as leaves, while the Ajtai hash function is parametrized by the three following integers which define a random (*n* x *m*) binary matrix, called the *Ajtai key*.
   
    - *n*    :     length of the output hash value (hexadecimal representation)
    - *m*    :     maximal length of the input string (binary representation)
@@ -37,7 +37,7 @@ The blockchain simulation is composed of the following five Java classes.
       <img src="https://github.com/WatiBenj/Blockchain_Ajtai_Hash/blob/master/Ajtai_Hash_Function.PNG" width="410" height="100">
    </p>
    
-   where the *n* x *m* binary matrix *A* is the *Ajtai key*.
+   where the (*n* x *m*) binary matrix *A* is the *Ajtai key*.
    
 - **Block.java**
 

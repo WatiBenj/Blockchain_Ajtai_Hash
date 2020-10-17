@@ -97,7 +97,7 @@ Below is an output example from the execution of the *Main* class. As we can obs
 
 ## Support
 
-Benjamin Fischer - benjamin.fischer@etu.unige.ch
+Benjamin Fischer - befischer@student.ethz.ch
 
 ## Future Work
 
